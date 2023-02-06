@@ -13,7 +13,7 @@ class Base:
         get_url = self.driver.current_url
         print('Current url ' + get_url)
 
-    """Method assert words"""
+    """Method assert words. result - указываем при вызове метода"""
 
     def assert_word(self, word, result):
         value_word = word.text
@@ -32,4 +32,4 @@ class Base:
     def get_screenshot(self):
         now_date = datetime.datetime.utcnow().strftime("%Y, %m, %d, %H, %M, %S")
         name_screenshot = "screenshot" + now_date + '.png'
-        self.driver.save_screenshot('/home/nevi/Документы/git/Selenium-Python/Labirint.ru/screens' + name_screenshot)
+        self.driver.save_screenshot('/home/nevi/Документы/git/Selenium-Python/Labirint.ru/screens/' + name_screenshot)

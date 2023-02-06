@@ -15,6 +15,7 @@ class ProductsPage(Base):
         super().__init__(driver)
 
     # Locators
+    '''Список локаторов'''
 
     burger_menu_books = '/html/body/div[1]/div[10]/div[4]/div/div[1]/div[4]/div/div[1]/ul/li[1]/span/a'
     comics_manga_artbooks = '//*[@id="header-genres"]/div/ul/li[6]/span'
@@ -34,6 +35,7 @@ class ProductsPage(Base):
     button_add_in_cart = '//*[@id="buyingbtns850704"]/a/span'
 
     # Getters
+    '''Находим элементы на странице'''
 
     def get_burger_menu_books(self):
         return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.burger_menu_books)))
@@ -82,6 +84,7 @@ class ProductsPage(Base):
         return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.button_add_in_cart)))
 
     # Actions
+    '''Симулируем нажатие кнопок'''
 
     def click_burger_menu_books(self):
         ActionChains(self.driver).move_to_element(self.get_burger_menu_books()).perform()
@@ -145,6 +148,7 @@ class ProductsPage(Base):
         print('Click button Add in cart')
 
     # Methods
+    '''Инициализируем методы функции'''
 
     def select_products(self):
         self.click_burger_menu_books()

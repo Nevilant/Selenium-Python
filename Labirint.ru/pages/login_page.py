@@ -14,12 +14,14 @@ class LoginPage(Base):
         super().__init__(driver)
 
     # Locators
+    '''Список локаторов'''
 
     button_cabinet = '//a[contains(@class, "top-link-main_cabinet")]'
     field_user_name = '/html/body/div[1]/div[1]/div/div/div/div/div[1]/form[1]/div[3]/input'
     button_login = '//input[@id="g-recap-0-btn"]'
 
     # Getters
+    '''Находим элементы на странцие'''
 
     def get_button_cabinet(self):
         return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.button_cabinet)))
@@ -31,6 +33,7 @@ class LoginPage(Base):
         return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.button_login)))
 
     # Actions
+    '''Симулируем нажатие кнопок'''
 
     def click_button_cabinet(self):
         self.get_button_cabinet().click()
@@ -47,6 +50,7 @@ class LoginPage(Base):
         print('Click button login')
 
     # Methods
+    '''Инициализируем методы функции'''
 
     def authorisation(self):
         self.click_button_cabinet()

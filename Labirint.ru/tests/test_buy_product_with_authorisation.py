@@ -6,6 +6,7 @@ from pages.main_page import MainPage
 from pages.login_page import LoginPage
 from pages.products_page import ProductsPage
 from pages.cart_page import CartPage
+from base.base_class import Base
 
 
 def test_buy_product():
@@ -25,5 +26,8 @@ def test_buy_product():
 
     cp = CartPage(driver)
     cp.buy_products()
+
+    bc = Base(driver)
+    bc.get_screenshot()
 
     time.sleep(5)

@@ -3,7 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 from pages.main_page import MainPage
-from pages.login_page import LoginPage
 from pages.products_page import ProductsPage
 from pages.cart_page import CartPage
 from base.base_class import Base
@@ -17,9 +16,6 @@ def test_buy_product():
 
     mp = MainPage(driver)
     mp.go_to_site()
-
-    login = LoginPage(driver)
-    login.authorisation()
 
     pg = ProductsPage(driver)
     pg.select_products()

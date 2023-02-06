@@ -32,4 +32,4 @@ class Base:
     def get_screenshot(self):
         now_date = datetime.datetime.utcnow().strftime("%Y, %m, %d, %H, %M, %S")
         name_screenshot = "screenshot" + now_date + '.png'
-        self.driver.save_screenshot('/home/nevi/GitProjects/labirintProject/screens' + name_screenshot)
+        self.driver.save_screenshot('/home/nevi/Документы/git/Selenium-Python/Labirint.ru/screens' + name_screenshot)

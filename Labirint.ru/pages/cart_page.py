@@ -45,5 +45,5 @@ class CartPage(Base):
 
     def buy_products(self):
         self.click_button_cart()
-        self.assert_word(self.get_name_product_word(), 'Гангста. Gangsta. Том 1')
+        self.assert_word(self.get_name_product_word(), 'Берсерк. Том 4')
         self.click_big_red_button()

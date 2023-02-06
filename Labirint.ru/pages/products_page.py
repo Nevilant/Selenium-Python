@@ -30,7 +30,7 @@ class ProductsPage(Base):
     select_cover = '/html/body/div[1]/div[10]/div[4]/div[1]/div[8]/div[2]/div/div[4]/div/div[1]/div[4]/div[' \
                    '2]/form/div[7]/div[2]/div[1]/label'
     button_filtered_products = '//input[@class="show-goods__button"]'
-    select_product = 'Гангста. Gangsta. Том 1'
+    select_product = 'Берсерк. Том 4'
     button_add_in_cart = '//*[@id="buyingbtns893397"]/a'
 
     # Getters

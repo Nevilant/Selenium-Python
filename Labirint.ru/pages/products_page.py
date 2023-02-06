@@ -16,19 +16,19 @@ class ProductsPage(Base):
 
     # Locators
 
-    burger_menu_books = '//*[@id="minwidth"]/div[4]/div/div[1]/div[4]/div/div[1]/ul/li[1]/span'
+    burger_menu_books = '/html/body/div[1]/div[10]/div[4]/div/div[1]/div[4]/div/div[1]/ul/li[1]/span/a'
     comics_manga_artbooks = '//*[@id="header-genres"]/div/ul/li[6]/span'
     manga = '//*[@id="header-genres"]/div/ul/li[6]/ul/li[7]/a'
     main_word = 'genre-name'
-    button_all_filters = '//*[@id="catalog-navigation"]/div/form/div[1]/div[1]/div/div/span[4]/span/span/span/span'
+    button_all_filters = '/html/body/div[1]/div[10]/div[3]/div[1]/div[6]/div[2]/div/div[3]/div/div[2]/div/form/div[' \
+                         '1]/div[1]/div/div/span[3]'
     price_filter = '//div[contains(@class, "price-search")]'
     price_filter_min = '//input[@id="section-search-form-price_min"]'
     price_filter_max = '//input[@id="section-search-form-price_max"]'
     publisher_filter = '//div[contains(@class, "block-pubhouse-bl-name")]'
-    select_publisher = '//*[@id="section-search-form"]/div[5]/div[2]/div[1]/div/div[2]/div[2]/div/div[3]/label/span[1]'
-    cover_filter = '//*[@id="section-search-form"]/div[7]/div[1]'
-    select_cover = '/html/body/div[1]/div[10]/div[4]/div[1]/div[8]/div[2]/div/div[4]/div/div[1]/div[4]/div[' \
-                   '2]/form/div[7]/div[2]/div[1]/label'
+    select_publisher = '//*[@id="section-search-form"]/div[4]/div[2]/div[1]/div/div[2]/div[2]/div/div[1]/label'
+    cover_filter = '//*[@id="section-search-form"]/div[6]/div[1]'
+    select_cover = '//*[@id="section-search-form"]/div[6]/div[2]/div[1]/label'
     button_filtered_products = '//input[@class="show-goods__button"]'
     select_product = 'Берсерк. Том 4'
     button_add_in_cart = '//*[@id="buyingbtns893397"]/a'

@@ -16,7 +16,7 @@ class CartPage(Base):
 
     # Locators
 
-    button_cart = '//*[@id="minwidth"]/div[6]/div/div[1]/div[2]/div/ul/li[6]/a'
+    button_cart = '//*[@id="minwidth"]/div[5]/div/div[1]/div[2]/div/ul/li[6]/a/span[1]'
     name_product_word = 'product-title'
     big_red_button = '//button[contains(@class, "btn-primary")]'
 

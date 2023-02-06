@@ -27,7 +27,8 @@ class ProductsPage(Base):
     publisher_filter = '//div[contains(@class, "block-pubhouse-bl-name")]'
     select_publisher = '//*[@id="section-search-form"]/div[5]/div[2]/div[1]/div/div[2]/div[2]/div/div[3]/label/span[1]'
     cover_filter = '//*[@id="section-search-form"]/div[7]/div[1]'
-    select_cover = '/html/body/div[1]/div[10]/div[4]/div[1]/div[8]/div[2]/div/div[4]/div/div[1]/div[4]/div[2]/form/div[7]/div[2]/div[1]/label'
+    select_cover = '/html/body/div[1]/div[10]/div[4]/div[1]/div[8]/div[2]/div/div[4]/div/div[1]/div[4]/div[' \
+                   '2]/form/div[7]/div[2]/div[1]/label'
     button_filtered_products = '//input[@class="show-goods__button"]'
     select_product = 'Гангста. Gangsta. Том 1'
     button_add_in_cart = '//*[@id="buyingbtns893397"]/a'
@@ -71,7 +72,8 @@ class ProductsPage(Base):
         return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.select_cover)))
 
     def get_button_show_filtered_products(self):
-        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.button_filtered_products)))
+        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.button_filtered_products
+                                                                                )))
 
     def get_select_product(self):
         return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.LINK_TEXT, self.select_product)))

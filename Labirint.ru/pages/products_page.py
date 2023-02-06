@@ -16,7 +16,7 @@ class ProductsPage(Base):
 
     # Locators
 
-    burger_menu_books = '//*[@id="header-genres"]/div/ul/li[6]/ul/li[7]/a'
+    burger_menu_books = '//*[@id="minwidth"]/div[4]/div/div[1]/div[4]/div/div[1]/ul/li[1]/span'
     comics_manga_artbooks = '//*[@id="header-genres"]/div/ul/li[6]/span'
     manga = '//*[@id="header-genres"]/div/ul/li[6]/ul/li[7]/a'
     main_word = 'genre-name'

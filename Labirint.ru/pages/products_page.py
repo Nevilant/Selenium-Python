@@ -31,7 +31,7 @@ class ProductsPage(Base):
     select_cover = '//*[@id="section-search-form"]/div[6]/div[2]/div[1]/label'
     button_filtered_products = '//input[@class="show-goods__button"]'
     select_product = 'Берсерк. Том 4'
-    button_add_in_cart = '//*[@id="buyingbtns893397"]/a'
+    button_add_in_cart = '//*[@id="buyingbtns850704"]/a/span'
 
     # Getters
 

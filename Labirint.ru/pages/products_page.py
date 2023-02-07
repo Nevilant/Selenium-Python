@@ -17,7 +17,7 @@ class ProductsPage(Base):
     # Locators
     '''Список локаторов'''
 
-    burger_menu_books = '//a[text()="Книги"]'
+    burger_menu_books = "span[class$='first-child']"
     comics_manga_artbooks = '//span[text()="Комиксы, Манга, Артбуки"]'
     manga = '//*[@id="header-genres"]/div/ul/li[6]/ul/li[7]/a'
     main_word = 'genre-name'
@@ -38,7 +38,7 @@ class ProductsPage(Base):
     '''Находим элементы на странице'''
 
     def get_burger_menu_books(self):
-        return WebDriverWait(self.driver, 5).until(ec.element_to_be_clickable((By.XPATH, self.burger_menu_books)))
+        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.CSS_SELECTOR, self.burger_menu_books)))
 
     def get_burger_menu_comics(self):
         return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.comics_manga_artbooks)))

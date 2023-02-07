@@ -16,21 +16,21 @@ class LoginPage(Base):
     # Locators
     '''Список локаторов'''
 
-    button_cabinet = '//a[contains(@class, "top-link-main_cabinet")]'
-    field_user_name = '/html/body/div[1]/div[1]/div/div/div/div/div[1]/form[1]/div[3]/input'
-    button_login = '//input[@id="g-recap-0-btn"]'
+    button_cabinet = "a[class*='cabinet']"
+    field_user_name = "input[value='+7']"
+    button_login = "input[id='g-recap-0-btn']"
 
     # Getters
     '''Находим элементы на странцие'''
 
     def get_button_cabinet(self):
-        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.button_cabinet)))
+        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.CSS_SELECTOR, self.button_cabinet)))
 
     def get_user_name(self):
-        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.field_user_name)))
+        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.CSS_SELECTOR, self.field_user_name)))
 
     def get_button_login(self):
-        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.XPATH, self.button_login)))
+        return WebDriverWait(self.driver, 15).until(ec.element_to_be_clickable((By.CSS_SELECTOR, self.button_login)))
 
     # Actions
     '''Симулируем нажатие кнопок'''
